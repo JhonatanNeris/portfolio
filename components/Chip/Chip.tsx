@@ -4,7 +4,7 @@ type ChipProps = {
 const Chip = ({label}: ChipProps) => {
   return (
     <div>
-        <span className='bg-white/10 text-white px-3 py-1 rounded-full text-sm font-[500]'>
+        <span className='bg-white/10 text-white px-3 py-1 rounded-full text-sm font-[500] border-[0.5px] border-white/20'>
             {label}
         </span>
     </div>

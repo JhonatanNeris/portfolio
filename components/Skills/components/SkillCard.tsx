@@ -8,7 +8,7 @@ type Props = {
 
 const SkillCard = ({ skillName, svg }: Props) => {
     return (
-        <div className='group bg-[#1c1c22] rounded-[12px] p-6 font-[500] duration-500 hover:scale-110 hover:bg-[#25252c] transition-transform flex flex-col justify-center items-center gap-2'>
+        <div className='group bg-[#1c1c22] rounded-[12px] p-6 font-[500] duration-500 hover:scale-110 hover:bg-[#25252c] transition-transform flex flex-col justify-center items-center gap-2 border-[0.5px] border-white/20'>
             <Image
                 src={svg}
                 alt={skillName}

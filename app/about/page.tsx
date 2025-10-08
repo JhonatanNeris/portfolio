@@ -88,7 +88,7 @@ const About = () => {
     const temMaisQueLimite = cursosOrdenados.length > LIMITE_INICIAL;
 
     return (
-        <Container>
+        <Container>            
             <section className="mt-30 grid gap-10 grid-cols-1 sm:grid-cols-2">
                 <h1 className="text-4xl w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
                     Olá, eu sou o

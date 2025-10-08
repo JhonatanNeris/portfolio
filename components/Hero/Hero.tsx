@@ -16,7 +16,7 @@ const Hero = () => {
                     desenvolvedor  <br />
                     Full-stack
                 </h1> */}
-                <Reveal delay={.1}>
+                <Reveal delay={0.2}>
                     <h1 className="text-6xl w-full font-extrabold">
                         <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
                             Olá, eu sou o

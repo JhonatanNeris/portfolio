@@ -53,7 +53,7 @@ const TopProjects = () => {
             <p>
                 Selecionei alguns dos meus melhores projetos para te encantar...
             </p>
-            <div className='flex flex-col gap-12 mt-15'>
+            <div className='flex flex-col gap-12 mt-20'>
                 {projectsArray.map((project, index) => (
                     <CardProject key={index} {...project} />
                 ))}

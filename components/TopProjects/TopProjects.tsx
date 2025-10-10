@@ -49,7 +49,7 @@ const projectsArray: Project[] = [
 const TopProjects = () => {
     return (
         <section className='mt-20'>
-            <Reveal delay={0.1}><h2 className='text-4xl font-[700] mb-4'>Projetos populares</h2></Reveal>
+            <Reveal delay={0.2}><h2 className='text-4xl font-[700] mb-4'>Projetos populares</h2></Reveal>
             <p>
                 Selecionei alguns dos meus melhores projetos para te encantar...
             </p>

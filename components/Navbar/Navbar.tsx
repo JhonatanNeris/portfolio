@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div className="fixed top-4 right-0 left-0 z-10">
             <nav className="flex justify-between border-[0.5px] border-white/20 p-3 rounded-xl itens-center max-w-[1200px] mx-auto bg-[#0a0a0a] z-10">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-6">
                     <span className="text-2xl font-[700]">JN</span>
                     <ul className="flex gap-3">
                         <li>

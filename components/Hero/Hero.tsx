@@ -7,7 +7,7 @@ const Hero = () => {
     return (
 
         <section className='flex mt-30 flex-col sm:flex-row justify-between items-center gap-10'>
-            <div className='flex flex-col gap-5'>
+            <div className='flex flex-col gap-5 w-full'>
                 {/* <h1 className='text-6xl font-bold mb-4'>
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
                         Olá, eu sou o <br />
@@ -17,7 +17,7 @@ const Hero = () => {
                     Full-stack
                 </h1> */}
                 <Reveal delay={0.2}>
-                    <h1 className="text-6xl w-full font-extrabold">
+                    <h1 className="sm:text-5xl text-4xl md:text-6xl font-extrabold">
                         <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
                             Olá, eu sou o
                         </span>
@@ -32,7 +32,7 @@ const Hero = () => {
                     </h1>
                 </Reveal>
 
-                <p className='text-lg'>
+                <p className='text-base sm:text-lg text-gray-200'>
                     Transforme ideias em soluções completas, criando experiências digitais impactantes.
                 </p>
                 <div>
@@ -40,7 +40,7 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div>
+            <div className='w-full flex justify-end'>
                 <Image
                     src="/minhafoto.jpg"
                     alt="Hero Image"

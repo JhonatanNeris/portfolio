@@ -7,7 +7,7 @@ const ContactMe = () => {
     return (
         <section className='my-40 flex w-[80%] mx-auto'>
             <Reveal delay={0.2}>
-                <h2 className='text-5xl sm:text-6xl font-[700]'>
+                <h2 className='text-4xl sm:text-6xl font-[700]'>
                     Transforme ideias em soluções completas, criando experiências digitais impactantes.
                 </h2>
                 <div className='flex mt-10 flex-col items-center'>

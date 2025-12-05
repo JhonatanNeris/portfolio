@@ -1,6 +1,8 @@
+import Link from "next/link";
 import Button from "../Button/Button";
 import Chip from "../Chip/Chip";
 import Image from "next/image";
+import { Button as ButtonShadcn } from "../ui/button";
 
 type Project = {
     title: string;
@@ -38,8 +40,26 @@ const CardProject = (project: Project) => {
                         </div>
                     )}
                 </div>
-                <div className="mt-3">
-                    <Button name="Ver projeto" />
+                {/* BOTÕES */}
+                <div className="mt-4 flex gap-2">
+                    {/* Ver Projeto */}
+                    {project.liveLink && (
+                        <Button
+                            name="Ver projeto"
+                            href={project.liveLink}
+                            target="_blank"
+                        />
+                    )}
+
+                    {/* Ver Código */}
+                    {project.githubLink && (
+                        <Button
+                            name="Ver código"
+                            variant="outline"
+                            href={project.githubLink}
+                            target="_blank"
+                        />
+                    )}
                 </div>
             </div>
         </div>

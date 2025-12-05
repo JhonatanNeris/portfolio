@@ -21,6 +21,14 @@ const projectsArray: Project[] = [
         liveLink: 'https://sistema-bruto.com'
     },
     {
+        title: 'FSW - Barber', 
+        description: 'Saas de gestão de pedidos para lanchonetes e restaurantes. Meu projeto mais completo até hoje, com painel administrativo, controle de estoque, múltiplos usuários, sistema de pedidos, cardápio digital, relatórios e muito mais.',
+        image: '/bruto-caixa.png',
+        tags: ['React', 'TypeScript', 'Node.js', "Express","MongoDB"],
+        githubLink: 'https://github.com/JhonatanNeris/barber-app',
+        liveLink: 'https://barber-app-seven-sandy.vercel.app/'
+    },
+    {
         title: 'Space App', 
         description: 'Galeria de fotos do espaço.',
         image: '/space-app.png',

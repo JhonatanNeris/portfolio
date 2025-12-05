@@ -32,7 +32,7 @@ const Navbar = () => {
                 </div>
                 <div className="md:hidden">
                     <Sheet>
-                        <SheetTrigger>
+                        <SheetTrigger asChild>
                             <Button size="icon" variant="outline">
                                 <MenuIcon />
                             </Button>

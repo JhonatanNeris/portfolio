@@ -6,7 +6,7 @@ import Reveal from '../Reveal/Reveal'
 const Hero = () => {
     return (
 
-        <section className='flex mt-30 flex-col sm:flex-row justify-between items-center gap-10'>
+        <section className='flex mt-20 sm:mt-30 flex-col sm:flex-row justify-between items-center gap-10'>
             <div className='flex flex-col gap-5 w-full'>
                 {/* <h1 className='text-6xl font-bold mb-4'>
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>

@@ -1,4 +1,5 @@
 import Reveal from "../Reveal/Reveal"
+import Image from 'next/image'
 
 const AboutMe = () => {
     return (
@@ -7,8 +8,14 @@ const AboutMe = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
                 <div className="flex justify-center items-center">
-                    <div className="w-[280px] h-[280px] bg-blue-600 rounded-2xl">
-
+                    <div className="w-[280px] h-[280px] bg-blue-600 rounded-2xl overflow-hidden ">
+                        <Image
+                            src="/minhafoto.jpg"
+                            alt="Foto Jhonatan Neris"
+                            width={500}
+                            height={400}
+                            className='object-cover w-full h-full'
+                        />
                     </div>
                 </div>
                 <div>
@@ -34,7 +41,7 @@ const AboutMe = () => {
         </section>
 
 
-       
+
 
 
     )

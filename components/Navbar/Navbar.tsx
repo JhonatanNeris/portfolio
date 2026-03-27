@@ -6,11 +6,11 @@ import Link from "next/link"
 
 const Navbar = () => {
     return (
-        <div className="fixed top-4 right-0 left-0 z-10 mx-2">
-            <nav className="flex justify-between border-[0.5px] border-white/20 p-3 rounded-xl itens-center max-w-[1200px] mx-auto bg-[#0a0a0a] z-10">
-                <div className="flex items-center gap-6">
-                    <span className="text-2xl font-[700]">JN</span>
-                    <ul className="gap-3 hidden md:flex">
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[800px] z-50">
+            <nav className="flex items-center justify-between border-[0.5px] border-white/10 px-6 py-3 rounded-full bg-black/40 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+                <div className="flex items-center gap-8">
+                    <span className="text-2xl font-[700] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">JN</span>
+                    <ul className="gap-4 hidden md:flex">
                         <li>
                             <ButtonNavbar href="/" name="Home" />
                         </li>
@@ -26,14 +26,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="hidden md:block">
-                    <button className='bg-white text-black cursor-pointer px-4 py-1 rounded-xl hover:bg-gray-200 transition-colors font-[500]'>
+                    <button className='bg-white text-black cursor-pointer px-5 py-2 rounded-full hover:bg-gray-200 transition-colors font-[600] text-sm'>
                         Entre em contato
                     </button>
                 </div>
                 <div className="md:hidden">
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button size="icon" variant="outline">
+                            <Button size="icon" variant="ghost" className="rounded-full hover:bg-white/10">
                                 <MenuIcon />
                             </Button>
                         </SheetTrigger>

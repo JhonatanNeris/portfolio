@@ -17,8 +17,8 @@ const Hero = () => {
                     Full-stack
                 </h1> */}
                 <Reveal delay={0.2}>
-                    <h1 className="sm:text-5xl text-4xl md:text-6xl font-extrabold">
-                        <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
+                    <h1 className="sm:text-5xl text-4xl md:text-6xl font-extrabold tracking-tight">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-800">
                             Olá, eu sou o
                         </span>
                         <br />
@@ -40,13 +40,15 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='w-full flex justify-end'>
+            <div className='w-full flex justify-end relative group'>
+                <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-110 -z-10 transition-all duration-500 group-hover:bg-blue-500/30"></div>
                 <Image
                     src="/minhafoto.jpg"
                     alt="Hero Image"
                     width={450}
                     height={400}
-                    className='rounded-[12px]'
+                    priority
+                    className='rounded-2xl ring-1 ring-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]'
                 />
 
             </div>

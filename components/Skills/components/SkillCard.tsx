@@ -12,9 +12,10 @@ const SkillCard = ({ skillName, svg }: Props) => {
             <Image
                 src={svg}
                 alt={skillName}
-                width={90}
-                height={80}
-                className="mb-2 duration-500 group-hover:scale-125"
+                width={120}
+                height={120}
+                style={{ width: 'auto', height: 'auto' }}
+                className="mb-2 duration-500 group-hover:scale-125 min-w-[50px] min-h-[50px]"
             />
             <h3>
                 {skillName}

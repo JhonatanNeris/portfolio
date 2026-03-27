@@ -1,3 +1,5 @@
+"use client"
+
 import { MenuIcon } from "lucide-react"
 import ButtonNavbar from "../ButtonNavbar/ButtonNavbar"
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"

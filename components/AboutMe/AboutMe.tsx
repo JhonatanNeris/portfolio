@@ -25,8 +25,9 @@ const AboutMe = () => {
                     <Image
                         src="/minhafoto.jpg"
                         alt="Foto Jhonatan Neris"
-                        fill
-                        className='object-cover w-full h-full transition-transform duration-700 group-hover:scale-105'
+                        fill={true}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"    
+                        className='object-cover transition-transform duration-700 group-hover:scale-105'
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                         <span className="text-white font-[600] text-xl whitespace-nowrap">Brasília, BR</span>

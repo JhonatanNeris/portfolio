@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import Button from '../Button/Button'
 import Reveal from '../Reveal/Reveal'
@@ -47,7 +46,8 @@ const Hero = () => {
                     alt="Hero Image"
                     width={450}
                     height={400}
-                    priority
+                    // style={{ width: 'auto', height: 'auto' }}
+                    preload={true}
                     className='rounded-2xl ring-1 ring-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]'
                 />
 

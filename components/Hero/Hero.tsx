@@ -5,7 +5,7 @@ import Reveal from '../Reveal/Reveal'
 const Hero = () => {
     return (
 
-        <section className='flex mt-20 sm:mt-30 flex-col sm:flex-row justify-between items-center gap-10'>
+        <section id="inicio" className='flex mt-20 sm:mt-30 flex-col sm:flex-row justify-between items-center gap-10'>
             <div className='flex flex-col gap-5 w-full'>
                 {/* <h1 className='text-6xl font-bold mb-4'>
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600'>
@@ -35,7 +35,7 @@ const Hero = () => {
                     Transforme ideias em soluções completas, criando experiências digitais impactantes.
                 </p>
                 <div>
-                    <Button name="Baixar CV" />
+                    <Button name="Baixar CV" href="/cv-jhonatan-neris.pdf" target="_self" download />
                 </div>
 
             </div>
@@ -47,7 +47,7 @@ const Hero = () => {
                     width={450}
                     height={400}
                     // style={{ width: 'auto', height: 'auto' }}
-                    preload={true}
+                    priority={true}
                     className='rounded-2xl ring-1 ring-white/10 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]'
                 />
 

@@ -8,7 +8,7 @@ export default function Reveal({ children, delay = 0, y = 24 }: Props) {
     <motion.div
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.4 }}   // anima 1x quando 20% do bloco entra
+      viewport={{ once: true, amount: 0.4 }}   // anima 1x quando 40% do bloco entra
       transition={{ duration: 0.8, ease: "easeOut", delay }}
     >
       {children}

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const AboutMe = () => {
     return (
-        <section className='mt-20'>
+        <section id="sobre" className='mt-20'>
             <Reveal delay={0.2}><h2 className='text-4xl font-[700] mb-4'>Sobre mim</h2></Reveal>
 
             <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 mt-20">

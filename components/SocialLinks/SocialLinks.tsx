@@ -57,7 +57,7 @@ export default function SocialLinks({
     const baseBtn = "inline-flex h-10 w-10 items-center justify-center transition-transform duration-250 active:scale-95 hover:scale-155";
 
     return (
-        <nav aria-label={ariaLabel} className={`flex items-center", ${gap}, ${className}`}>
+        <nav aria-label={ariaLabel} className={`flex items-center ${gap} ${className ?? ''}`}>
             {items.map(({ label, href, icon: Icon }) => {
                 const isExternal = /^https?:\/\//.test(href) || openInNewTab;
                 const Comp = isExternal ? "a" : Link;
@@ -69,7 +69,7 @@ export default function SocialLinks({
                             ? { href, target: "_blank", rel: "noopener noreferrer" }
                             : { href })}
                         aria-label={label}
-                        className={`${baseBtn}, ${variants[variant]}, ${shape}`}
+                        className={`${baseBtn} ${variants[variant]} ${shape}`}
                         title={label}
                     >
                         <Icon size={size} />

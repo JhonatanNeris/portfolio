@@ -5,9 +5,10 @@ type ButtonVariant = "solid" | "outline" | "danger";
 type Props = {
   name?: string;
   onClick?: () => void;
-  href?: string; // <-- link opcional
+  href?: string;
   target?: "_blank" | "_self"; 
   variant?: ButtonVariant;
+  download?: boolean;
 };
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
   href,
   target = "_blank",
   variant = "solid",
+  download,
 }: Props) => {
   const baseStyles =
     "cursor-pointer px-6 py-3 rounded-xl font-[500] transition-colors inline-block";
@@ -33,8 +35,9 @@ const Button = ({
     return (
       <a
         href={href}
-        target={target}
-        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+        target={download ? undefined : target}
+        rel={target === "_blank" && !download ? "noopener noreferrer" : undefined}
+        download={download || undefined}
         className={`${baseStyles} ${variants[variant]}`}
       >
         {name}

@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-
-import EducationCard from "@/components/EducationCard/EducationCard"
-import Container from "../../components/Container/Container"
+import EducationCard from "../EducationCard/EducationCard";
+import Reveal from "../Reveal/Reveal";
 
 const formacoes = [
     {
@@ -21,7 +20,7 @@ const formacoes = [
         instituicao: "Colégio CIMAN",
         periodo: "Fevereiro 2014 - Novembro 2016",
     },
-]
+];
 
 const cursos = [
     // Udemy
@@ -30,7 +29,6 @@ const cursos = [
     { curso: "React do Zero à Maestria (hooks, router, API, projetos)", instituicao: "Udemy", periodo: "fevereiro/2024" },
     { curso: "C# COMPLETO – Programação Orientada a Objetos + Projetos", instituicao: "Udemy", periodo: "maio/2024" },
     { curso: "Next.js e React – Curso Completo: Aprenda com Projetos", instituicao: "Udemy", periodo: "maio/2024" },
-    // (o curso “React Avançado: NextJS/Strapi…” estava como Não iniciado – não incluí)
 
     // Danki Code
     { curso: "Curso de Java Web", instituicao: "Danki Code", periodo: "junho/2024" },
@@ -65,92 +63,67 @@ const cursos = [
     { curso: "Aprenda a programar em C# com Orientação a Objetos (Formação)", instituicao: "Alura", periodo: "outubro/2023" },
     { curso: "C#: trabalhando com Arrays e Coleções", instituicao: "Alura", periodo: "outubro/2023" },
     { curso: ".NET: persistindo dados com Entity Framework Core", instituicao: "Alura", periodo: "março/2025" },
-
-    // (o “next.js: conheça o framework React” aparecia como Finalizando – deixei de fora)
 ];
 
-const MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 
 const key = (p: string) => {
-  const [mesStr, anoStr] = p.split("/");
-  const mes = String(MESES.indexOf(mesStr.toLowerCase()) + 1).padStart(2, "0");
-  return `${anoStr}-${mes}`; // ex.: "2024-04"
+    const [mesStr, anoStr] = p.split("/");
+    const mes = String(MESES.indexOf(mesStr.toLowerCase()) + 1).padStart(2, "0");
+    return `${anoStr}-${mes}`;
 };
 
 const cursosOrdenados = [...cursos].sort((a, b) => key(b.periodo).localeCompare(key(a.periodo)));
 
-const About = () => {
-
+const Education = () => {
     const [expandido, setExpandido] = useState(false);
-    const LIMITE_INICIAL = 10;
+    const LIMITE_INICIAL = 6;
 
     const listaCursos = expandido ? cursosOrdenados : cursosOrdenados.slice(0, LIMITE_INICIAL);
     const temMaisQueLimite = cursosOrdenados.length > LIMITE_INICIAL;
 
     return (
-        <Container>            
-            <section className="mt-30 grid gap-10 grid-cols-1 sm:grid-cols-2">
-                <h1 className="text-4xl w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800">
-                    Olá, eu sou o
-                    <br />
-                    Jhonatan Neris
-                </h1>
-                <p>
-                    Sou desenvolvedor full-stack, formado em Análise e Desenvolvimento de Sistemas pela Universidade UDF e em Gestão Pública pela Universidade Unyleya. Tenho paixão por aprendizado contínuo e estou sempre me desafiando por meio de cursos e projetos práticos que aplicam e validam meu conhecimento, além de compartilhar essas experiências com a comunidade Dev.
-                    <br />
-                    <br />
-                    Atualmente, trabalho na empresa familiar MangDog, onde tive a oportunidade de vivenciar de perto a rotina do comércio, desenvolvendo habilidades em atendimento ao cliente, gestão de equipe e treinamento de colaboradores. Essa experiência me proporcionou maturidade profissional, organização e resiliência, competências que levo também para a área de tecnologia.
-                    <br />
-                    <br />
-                    Meu objetivo agora é consolidar minha carreira como desenvolvedor, aplicando minhas habilidades técnicas em front-end e back-end (React, Next.js, Node.js, TypeScript) e crescendo dentro da área de tecnologia.
-                    <br />
-                    <br />
-                    Te convido a conhecer meus projetos no GitHub, que demonstram meu empenho em transformar teoria em prática.
-                </p>
-            </section>
-            <section className="mt-20 flex flex-col gap-10">
-                <div>
-                    <h2 className="text-4xl w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800 mb-5">
-                        Formações
-                    </h2>
-                    <div className="grid-cols-1 sm:grid-cols-2 grid gap-5">
-                        {formacoes.map((formacao, index) => (
-                            <EducationCard key={index} {...formacao} />
-                        ))}
+        <section className="mt-20">
+            <Reveal delay={0.2}>
+                <h2 className="text-4xl font-[700] mb-4">Formação & Cursos</h2>
+            </Reveal>
 
-                    </div>
+            <div className="mt-10">
+                <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800 mb-5">
+                    Formação Acadêmica
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {formacoes.map((formacao, index) => (
+                        <EducationCard key={index} {...formacao} />
+                    ))}
                 </div>
-                <div>
-                    <h2 className="text-4xl w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-800 mb-5">
-                        Cursos
-                    </h2>
+            </div>
 
-                    <div className="grid-cols-1 sm:grid-cols-2 grid gap-5">
-                        {listaCursos.map((curso, index) => (
-                            <EducationCard key={index} {...curso} />
-                        ))}
-
-                    </div>
-
-                    {temMaisQueLimite && (
-                        <div className="mt-6 flex justify-center">
-                            <button
-                                type="button"
-                                onClick={() => setExpandido((v) => !v)}
-                                aria-expanded={expandido}
-                                className="px-6 py-2 rounded-md font-semibold 
-                           bg-gradient-to-r from-blue-500 to-blue-800 
-                           text-white hover:to-blue-400 active:scale-[0.98] 
-                           transition"
-                            >
-                                {expandido ? "Ver menos" : `Ver mais (${cursos.length - LIMITE_INICIAL} restantes)`}
-                            </button>
-                        </div>
-                    )}
+            <div className="mt-10">
+                <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800 mb-5">
+                    Cursos & Certificações
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {listaCursos.map((curso, index) => (
+                        <EducationCard key={index} {...curso} />
+                    ))}
                 </div>
-            </section>
-        </Container>
-    )
-}
 
-export default About
+                {temMaisQueLimite && (
+                    <div className="mt-6 flex justify-center">
+                        <button
+                            type="button"
+                            onClick={() => setExpandido((v) => !v)}
+                            aria-expanded={expandido}
+                            className="px-6 py-2 rounded-md font-semibold bg-gradient-to-r from-blue-500 to-blue-800 text-white hover:to-blue-400 active:scale-[0.98] transition cursor-pointer"
+                        >
+                            {expandido ? "Ver menos" : `Ver mais (${cursos.length - LIMITE_INICIAL} restantes)`}
+                        </button>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default Education;

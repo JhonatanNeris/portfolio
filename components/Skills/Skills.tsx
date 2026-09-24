@@ -59,7 +59,7 @@ const skillsArray: Skill[] = [
 
 const Skills = () => {
     return (
-        <section className='mt-20'>
+        <section id="habilidades" className='mt-20'>
             <h2 className='text-4xl font-[700] mb-4'>Habilidades</h2>
             <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 mt-20'>
                 {skillsArray.length > 0 && skillsArray.map((skill, index) => (

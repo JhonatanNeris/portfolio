@@ -2,7 +2,7 @@ import Link from "next/link";
 import Button from "../Button/Button";
 import Chip from "../Chip/Chip";
 import Image from "next/image";
-import { Button as ButtonShadcn } from "../ui/button";
+
 
 type Project = {
     title: string;

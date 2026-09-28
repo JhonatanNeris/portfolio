@@ -26,9 +26,7 @@ const Navbar = () => {
                         <li>
                             <ButtonNavbar href="#habilidades" name="Habilidades" />
                         </li>
-                        <li>
-                            <ButtonNavbar href="#contato" name="Contato" />
-                        </li>
+
                     </ul>
                 </div>
                 <div className="hidden md:block">
@@ -73,11 +71,7 @@ const Navbar = () => {
                                             Habilidades
                                         </a>
                                     </SheetClose>
-                                    <SheetClose asChild>
-                                        <a href="#contato" className="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors">
-                                            Contato
-                                        </a>
-                                    </SheetClose>
+
                                 </div>
                                 <div className="flex flex-col gap-2 border-b border-solid py-5">
                                     <SheetClose asChild>

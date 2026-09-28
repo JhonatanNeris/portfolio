@@ -15,7 +15,7 @@ const projectsArray: Project[] = [
     {
         title: 'Sistema Bruto', 
         description: 'SaaS corporativo focado na gestão completa de pedidos para lanchonetes e restaurantes. É uma solução B2B robusta que centraliza múltiplos usuários, controle eficiente de fluxo de caixa, estoque automatizado, e geração de cardápios digitais interativos.',
-        image: '/bruto-caixa.png',
+        image: '/bruto-caixa-4.png',
         tags: ['React', 'TypeScript', 'Node.js', "Express", "MongoDB"],
         githubLink: '',
         liveLink: 'https://sistema-bruto.com'

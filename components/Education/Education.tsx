@@ -6,6 +6,11 @@ import Reveal from "../Reveal/Reveal";
 
 const formacoes = [
     {
+        curso: "Pós-graduação em Arquitetura de Sistemas .NET",
+        instituicao: "FIAP",
+        periodo: "Março 2026 - (Previsão de Término: Janeiro 2027)",
+    },
+    {
         curso: "Análise e Desenvolvimento de Sistemas",
         instituicao: "Universidade UDF",
         periodo: "Agosto 2022 - Julho 2024",
